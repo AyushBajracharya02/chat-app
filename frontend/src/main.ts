@@ -4,7 +4,7 @@ import "./scss/main.scss";
 
 const socket = io("http://127.0.0.1:3000");
 
-document.querySelector("#send-message-button")?.addEventListener("click", (e) => {
+document.querySelector("#send-message-button")?.addEventListener("click", () => {
 	const messageBox: HTMLTextAreaElement = document.querySelector(
 		"#messageBox"
 	) as HTMLTextAreaElement;
