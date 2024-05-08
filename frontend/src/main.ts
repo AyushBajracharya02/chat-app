@@ -4,7 +4,7 @@ import "./scss/main.scss";
 
 const socket = io("http://127.0.0.1:3000");
 
-document.querySelector("button")?.addEventListener("click", (e) => {
+document.querySelector("#send-message-button")?.addEventListener("click", (e) => {
 	const messageBox: HTMLTextAreaElement = document.querySelector(
 		"#messageBox"
 	) as HTMLTextAreaElement;
@@ -12,6 +12,7 @@ document.querySelector("button")?.addEventListener("click", (e) => {
 		return;
 	}
 	const message: string = messageBox.value;
+	messageBox.value = "";
 	displayMessage(message, "sent");
 	socket.emit("send-message", message);
 });
