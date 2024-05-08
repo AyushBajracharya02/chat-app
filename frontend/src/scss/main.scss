@@ -1,0 +1,36 @@
+.chat-app {
+	height: calc(100vh - 3rem * 2);
+	&-wrapper {
+		padding-block: 3rem;
+	}
+	&-messages {
+	}
+}
+
+.message {
+	padding: 0.5rem 1rem;
+	border-radius: 0.5rem;
+	color: white;
+	max-width: 80%;
+	&.sent {
+		background-color: var(--bs-blue);
+	}
+	&.received {
+		background-color: var(--bs-indigo);
+	}
+	&-wrapper {
+		display: flex;
+		justify-content: var(--jc-value);
+		&.sent {
+			--jc-value: flex-end;
+		}
+		&.received {
+			--jc-value: flex-start;
+		}
+	}
+}
+
+textarea {
+	resize: none;
+	white-space: pre-wrap;
+}
