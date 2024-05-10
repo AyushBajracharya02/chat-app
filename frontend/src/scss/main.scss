@@ -3,7 +3,13 @@
 	&-wrapper {
 		padding-block: 3rem;
 	}
-	&-messages {
+	&-count {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		.material-symbols-outlined {
+			cursor: pointer;
+		}
 	}
 }
 
@@ -33,4 +39,8 @@
 textarea {
 	resize: none;
 	white-space: pre-wrap;
+}
+
+.btn {
+	min-width: fit-content;
 }
